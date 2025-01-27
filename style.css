@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grid_6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px;
+  margin: 5px;
+  gap: 20px;
+}
+.accessories,
+.apparel,
+.footwear,
+.free_items,
+.personal_care,
+.sporting_goods {
+  border: solid rgb(196, 196, 196);
+  border-radius: 5px;
+  background-color: rgb(196, 196, 196);
+  padding: 20px;
+  display: block; /* Får linket til at fylde hele linjen */
+}
+.accessories a,
+.apparel a,
+.footwear a,
+.free_items a,
+.personal_care a,
+.sporting_goods a {
+  text-decoration: none;
+  color: black;
+}
+.accessories:hover,
+.apparel:hover,
+.footwear:hover,
+.free_items:hover,
+.personal_care:hover,
+.sporting_goods:hover {
+  background-color: rgb(240, 240, 240); /* Skift baggrundsfarve ved hover */
+  border-color: blue; /* Skifter border til blå ved hover */
+}
+a:hover {
+  color: blue;
+}
+
+.spejl {
+  display: inline-block;
+  transform: scaleX(-1); /*spejlvendt r*/
+}
+.card_1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.button {
+  display: block; /* Gør knappen til en blok, så den fylder hele bredden */
+  padding: 15px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%; /* Sørger for, at knappen fylder hele containeren */
+  font-size: 18px;
+  box-sizing: border-box; /* Gør at padding og border er inkluderet i bredden */
+  text-decoration: none;
+}
+
+.card_1 button:hover {
+  opacity: 0.7;
+}
+
+/*************************DESKTOP***********************/
+@media screen and (min-width: 700px) {
+  .grid_6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*Grid med 3 columns*/
+    gap: 30px;
+    margin: 30px;
+    padding: 10px;
+    text-align: center; /*Centrerer teksten*/
+  }
+  .accessories,
+  .apparel,
+  .footwear,
+  .free_items,
+  .personal_care,
+  .sporting_goods {
+    border: solid rgb(196, 196, 196);
+    background-color: rgb(196, 196, 196);
+    padding: 20px;
+  }
+  .product_list_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Minimum 300px per kolonne */
+    gap: 20px; /* Mellemrum mellem kortene */
+    padding: 20px;
+  }
+}
