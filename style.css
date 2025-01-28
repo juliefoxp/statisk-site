@@ -52,6 +52,7 @@ a:hover {
 .spejl {
   display: inline-block;
   transform: scaleX(-1); /*spejlvendt r*/
+  color: red;
 }
 .card_1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
