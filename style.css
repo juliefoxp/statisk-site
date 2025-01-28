@@ -8,6 +8,9 @@ img {
   height: auto;
   display: block;
 }
+.category_list_container {
+  padding-bottom: 50px;
+}
 
 .grid_6 {
   display: grid;
@@ -22,9 +25,9 @@ img {
 .free_items,
 .personal_care,
 .sporting_goods {
-  border: solid rgb(196, 196, 196);
+  border: solid rgb(156, 159, 168);
   border-radius: 5px;
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(156, 159, 168);
   padding: 20px;
   display: block; /* Får linket til at fylde hele linjen */
 }
@@ -44,23 +47,24 @@ img {
 .personal_care:hover,
 .sporting_goods:hover {
   background-color: rgb(240, 240, 240); /* Skift baggrundsfarve ved hover */
-  border-color: blue; /* Skifter border til blå ved hover */
+  border-color: rgb(157, 170, 218); /* Skifter border til blå ved hover */
 }
 a:hover {
-  color: blue;
+  color: rgb(157, 170, 218);
 }
 
 .spejl {
   display: inline-block;
   transform: scaleX(-1); /*spejlvendt r*/
-  color: rgb(149, 148, 154);
+  color: rgb(156, 159, 168);
 }
 .card_1 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgb(226, 225, 225);
   max-width: 300px;
   margin: auto;
   text-align: center;
-  font-family: arial;
+  font-family: "Questrial", serif;
+  background-color: rgb(226, 225, 225);
 }
 
 .price {
@@ -104,7 +108,7 @@ button:hover {
   text-align: center;
 }
 .product-container {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(216, 214, 210);
   padding: 20px;
 }
 
@@ -124,9 +128,12 @@ button:hover {
   .free_items,
   .personal_care,
   .sporting_goods {
-    border: solid rgb(196, 196, 196);
-    background-color: rgb(196, 196, 196);
+    border: solid rgb(156, 159, 168);
+    background-color: rgb(156, 159, 168);
     padding: 20px;
+  }
+  .category_list_container {
+    padding-bottom: 500px;
   }
   .product_list_container {
     display: grid;
@@ -137,20 +144,25 @@ button:hover {
   .product-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px; /* Afstand mellem kolonnerne */
-    margin: 10px;
+    gap: 1px; /* Afstand mellem kolonnerne */
     padding: 20px;
-    border: solid rgb(240, 240, 240);
-    align-items: center;
+    text-align: center;
+    align-items: start;
+    background-color: rgb(172, 172, 172);
+    margin: 20px;
   }
 
   .product-image img {
-    width: 75%;
+    width: 65%;
     height: auto;
   }
 
   .product-details {
     padding: 10px;
     text-align: center;
+  }
+
+  .product-details p {
+    margin-bottom: 80px; /* Mellemrum mellem paragrafteksterne */
   }
 }

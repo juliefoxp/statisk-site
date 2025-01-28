@@ -8,10 +8,11 @@ img {
   height: auto;
   display: block;
 }
-main {
-  padding: 10px;
-  margin: 10px;
+body {
+  background-color: rgb(216, 214, 210);
+  margin-top: -10px;
 }
+
 h1 {
   font-family: "Archivo Black", serif;
   font-weight: 400;
@@ -33,6 +34,14 @@ p {
 p {
   padding: 10px;
 }
+.logo a {
+  text-decoration: none;
+}
+.logo h1 {
+  color: initial; /* Dette fjerner eventuel farve */
+  text-decoration: none; /* Dette fjerner understregning */
+}
+
 /*****************MENU & BURGERMENU***********/
 
 header {
@@ -43,6 +52,7 @@ header {
   align-items: center;
   padding: 1rem;
   border-bottom: solid black;
+  background-color: rgb(216, 214, 210);
 }
 
 nav {
@@ -76,7 +86,7 @@ nav {
 }
 
 .menu a:hover {
-  color: blue;
+  color: rgb(156, 159, 168);
 }
 
 .burger {
@@ -120,7 +130,7 @@ nav {
 
   nav.active .menu {
     display: block;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(216, 214, 210);
     position: absolute;
     top: 80px;
     left: 0;
