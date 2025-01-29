@@ -95,15 +95,16 @@ a:hover {
   margin: 20px;
 }
 button {
-  border: solid black;
+  border: solid white;
   border-radius: 5px;
   color: black;
-  background-color: rgb(211, 211, 218);
+  background-color: white;
   padding: 10px;
   text-align: center;
 }
 button:hover {
-  color: blue;
+  border: solid rgb(157, 170, 218);
+  background-color: rgb(157, 170, 218);
 }
 .product-details {
   text-align: center;
@@ -130,7 +131,7 @@ button:hover {
   opacity: 0.3;
 }
 .discount {
-  background-color: rgba(104, 150, 216, 0.7); /* Grøn farve med gennemsigtighed */
+  background-color: rgba(104, 150, 216, 0.7); /* blå farve med gennemsigtighed */
   color: white;
   font-size: 18px;
   text-align: center;
