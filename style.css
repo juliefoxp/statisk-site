@@ -109,7 +109,7 @@ button:hover {
 .product-details {
   text-align: center;
 }
-.product-container {
+.productContainer {
   background-color: rgb(216, 214, 210);
   padding: 20px;
 }
@@ -173,7 +173,7 @@ button:hover {
     gap: 20px; /* Mellemrum mellem kortene */
     padding: 20px;
   }
-  .product-container {
+  .productContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1px; /* Afstand mellem kolonnerne */
