@@ -14,7 +14,6 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
           <h1> ${data.productdisplayname}</h1>
           <p>Pris: ${data.price}</p> 
           <p>Brand: ${data.category}</p>
-          <p>Product details: Light blue, 500 ml vandflaske.</p>
           <button>ADD TO BASKET</button>
         </div>
       </div>
