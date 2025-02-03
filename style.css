@@ -143,6 +143,9 @@ button:hover {
   z-index: 10; /* Sørger for, at labelen er foran billedet */
   font-weight: bold;
 }
+.apparel {
+  margin: 20px;
+}
 
 /*************************DESKTOP***********************/
 @media screen and (min-width: 700px) {
