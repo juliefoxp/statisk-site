@@ -1,24 +1,32 @@
-const product_list_container = document.querySelector(".product_list_container");
-fetch(`https://kea-alt-del.dk/t7/api/products/`)
-  .then((response) => response.json())
-  .then((data) => showList(data));
+const mycategory = new URLSearchParams(window.location.search).get("category");
+console.log("productliste loader.. med category:", mycategory);
 
-function showList(products) {
-  console.log(products);
-  let markup = "";
-  products
-    .map((product) => {
-      markup += `
-        <div class="card_1">
-          <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="acc_1" /> 
-          <h1>${product.productdisplayname}</h1>
-          <p class="price"> Price: ${product.price}</p>
-          <p>Productyear: ${product.productionyear}</p>
-          <p>Brand: ${product.brandname}</p>
-          <p><a href="product.html" class="button">Buy</a></p>
-        </div>`;
-    })
+const productlist = document.querySelector(".product_list_container");
+const overskrift = document.querySelector(".category_headline");
+
+overskrift.innerHTML = mycategory;
+
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=100&category=${mycategory}`)
+  .then((response) => response.json())
+  .then(showProducts);
+
+function showProducts(data) {
+  console.log(data);
+  markup = data
+    .map(
+      (element) =>
+        `
+      <div class="card_1 ${element.soldout ? "sold-out" : ""}">
+  ${element.soldout ? '<span class="sold-out-label">SOLD OUT</span>' : ""}
+          <img src="https://kea-alt-del.dk/t7/images/webp/640/${element.id}.webp" alt="acc_1" /> 
+          <h1>${element.productdisplayname}</h1>
+          <p class="price"> Price: ${element.price}</p>
+          <p>Productyear: ${element.productionyear}</p>
+          <p>Brand: ${element.brandname}</p>
+          <p><a href="product.html?id=${element.id}">ADD TO BASKET</a></p>
+        </div>`
+    )
     .join("");
   console.log(markup);
-  product_list_container.innerHTML = markup;
+  productlist.innerHTML = markup;
 }
