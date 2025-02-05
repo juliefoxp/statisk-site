@@ -66,6 +66,11 @@ a:hover {
   font-family: "Questrial", serif;
   background-color: rgb(226, 225, 225);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Sørg for at indholdet fylder hele højden */
+  height: 100%; /* Sørger for at kortene strækker sig i højden */
+  min-height: 250px; /* Minimum højden af kortene */
 }
 
 .price {
@@ -129,6 +134,9 @@ button:hover {
 .apparel {
   margin: 20px;
 }
+.product_list_container {
+  padding: 30px;
+}
 
 /*************************DESKTOP***********************/
 @media screen and (min-width: 700px) {
@@ -149,14 +157,17 @@ button:hover {
     border: solid rgb(156, 159, 168);
     background-color: rgb(156, 159, 168);
     padding: 20px;
+    text-align: center;
   }
   .category_list_container {
     padding-bottom: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
   }
   .product_list_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Minimum 300px per kolonne */
-    gap: 20px; /* Mellemrum mellem kortene */
+    gap: 10px; /* Mellemrum mellem kortene */
     padding: 20px;
   }
   .productContainer {
@@ -165,6 +176,7 @@ button:hover {
     padding: 20px;
     background-color: rgb(172, 172, 172);
     margin: 20px;
+    text-align: center;
   }
 
   .product-image img {
@@ -175,5 +187,10 @@ button:hover {
 
   .product-details p {
     margin-bottom: 80px; /* Mellemrum mellem paragrafteksterne */
+  }
+
+  .product_img {
+    width: 70%; /* Ændrer bredden på billedet */
+    height: auto; /* Bevarer proportionerne */
   }
 }

@@ -23,7 +23,7 @@ function showProducts(data) {
           <p class="price"> Price: ${element.price}</p>
           <p>Productyear: ${element.productionyear}</p>
           <p>Brand: ${element.brandname}</p>
-          <p><a href="product.html?id=${element.id}">ADD TO BASKET</a></p>
+          <p><a href="product.html?id=${element.id}" class="button">ADD TO BASKET</a></p>
         </div>`
     )
     .join("");
