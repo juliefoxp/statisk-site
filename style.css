@@ -167,7 +167,7 @@ button:hover {
   .product_list_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Minimum 300px per kolonne */
-    gap: 10px; /* Mellemrum mellem kortene */
+    gap: 40px; /* Mellemrum mellem kortene */
     padding: 20px;
   }
   .productContainer {
