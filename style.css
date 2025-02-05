@@ -121,7 +121,7 @@ button:hover {
 .sold-out {
   background-color: rgba(226, 154, 138, 0.7);
   color: white;
-  font-size: 16px;
+  font-size: 15px;
 }
 .acc_4 {
   opacity: 0.3;
@@ -136,6 +136,23 @@ button:hover {
 }
 .product_list_container {
   padding: 30px;
+}
+.discount-label {
+  color: black;
+  font-weight: bold;
+  background-color: rgb(182, 222, 179);
+  padding: 2px 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.original-price {
+  text-decoration: line-through; /* Gennemstreger den oprindelige pris */
+  color: #999;
+  margin-left: 10px;
+  font-size: 20px;
+  display: inline-block; /* Gør det muligt at justere positionen */
 }
 
 /*************************DESKTOP***********************/
