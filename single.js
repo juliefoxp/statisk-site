@@ -15,9 +15,9 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
           <p>Pris: ${data.price}</p> 
           <p>Brand: ${data.category}</p>
           <div class="size-buttons">
-  <button class="size-button">Small</button>
-  <button class="size-button">Medium</button>
-  <button class="size-button">Large</button>
+  <button class="size-button">SMALL</button>
+  <button class="size-button">MEDIUM</button>
+  <button class="size-button">LARGE</button>
 </div>
           <button>ADD TO BASKET</button>
   
