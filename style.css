@@ -154,6 +154,23 @@ button:hover {
   font-size: 20px;
   display: inline-block; /* Gør det muligt at justere positionen */
 }
+.size-buttons {
+  display: flex;
+  justify-content: center; /* Centrerer knapperne horisontalt */
+  padding-bottom: 40px;
+}
+
+.size-button {
+  padding: 5px;
+  font-size: 15px;
+  margin: 15px;
+  border: solid #fff;
+  background-color: #fff;
+}
+
+.size-button:hover {
+  background-color: rgb(157, 170, 218);
+}
 
 /*************************DESKTOP***********************/
 @media screen and (min-width: 700px) {
